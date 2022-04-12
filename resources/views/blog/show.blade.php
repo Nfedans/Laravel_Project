@@ -7,7 +7,7 @@
             {{ $post->title }}
         </h1>
     </div>
-</div>
+</div>  
 
 <div class="w-4/5 m-auto pt-20">
     <span class="text-gray-500">
