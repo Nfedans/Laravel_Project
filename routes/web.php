@@ -25,3 +25,5 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 
 Route::get('/plantFinder', [\App\Http\Controllers\PlantController::class, 'index']);
 
+Route::get('/redirect', '\App\Http\Controllers\Auth\LoginController@redirectToProvider');
+Route::get('/callback', '\App\Http\Controllers\Auth\LoginController@handleProviderCallback');
