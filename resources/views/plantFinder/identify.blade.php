@@ -1,5 +1,14 @@
 
+@extends('layouts.app')
 
+@section('content')
+@if (session()->has('message'))
+    <div class="w-4/5 m-auto mt-10 pl-2">
+        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+            {{ session()->get('message') }}
+        </p>
+    </div>
+@endif
 
 <?php
 
@@ -49,19 +58,31 @@ $returnedData = identifyPlants([$target_file]);
 // echo $returnedData;
 $data2 = json_decode($returnedData, true);
 
-// echo count($data2['suggestions'][0]);
-
 
 if(sizeof($data2['suggestions']) !== 0){
 foreach( $data2['suggestions'] as $suggestion)
 {
-    print "<h1>" . $suggestion['plant_name'] . "</h1>";
-    print "<h1>Common Name: " . $suggestion['plant_details']['common_names'][0] . "</h1>";
+	if( $suggestion['plant_name'] != null)
+	{
+		print "<h1>" . $suggestion['plant_name'] . "</h1>";
+	}
+    
+	
+	if( $suggestion['plant_details']['common_names'] != null)
+	{
+		print "<h1>Common Name: " . $suggestion['plant_details']['common_names'][0] . "</h1>";
+	}
+    
+	if($suggestion['similar_images'][0]){
     print "<img src = " . $suggestion['similar_images'][0]['url'] . " />";
-            
+	}   
             
     //     </div>
     // </div>";
 }
 }
+
 ?>
+
+
+@endsection
