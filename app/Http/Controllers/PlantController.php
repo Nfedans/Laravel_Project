@@ -10,6 +10,10 @@ class PlantController extends Controller
     {
         return view('plantFinder.plantFinder');
     }
-    
+    public function identify()
+    {
+        return view('plantFinder.identify');
+    }
+
 }
 
