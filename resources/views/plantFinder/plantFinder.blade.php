@@ -58,7 +58,7 @@ function identifyPlants($file_names){
 	return $result;
 }
 // print_r(identifyPlants(['C:\xampp\htdocs\Laravel_Project\public\images\62487aaeafc46-Sample Blog.jpg']));
-$returnedData = identifyPlants(['C:\xampp\htdocs\Laravel_Project\public\images\6256040c81a1c-Lobelias.jpg']);
+$returnedData = identifyPlants(['public\images\6256040c81a1c-Lobelias.jpg']);
 // echo $returnedData;
 $data2 = json_decode($returnedData, true);
 
