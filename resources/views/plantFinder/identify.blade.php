@@ -25,7 +25,7 @@ function encodeImages($images){
 }
 function identifyPlants($file_names){
 	$encoded_images = encodeImages($file_names);
-	$api_key = "fJqOnwaI5QFVRZnHYOl8WDNNLiEKTYmLIg6OFXlRdbxq5JMvPG";
+	$api_key = "zLJpBPEtygPeJVTiW7ZbVa3neMSKtP9J9S2dPTS7v37y4Un0Vo";
 	$params = array(
 		"api_key" => $api_key,
 		"images" => $encoded_images,
@@ -53,36 +53,48 @@ function identifyPlants($file_names){
 	curl_close($ch);
 	return $result;
 }
-// print_r(identifyPlants(['C:\xampp\htdocs\Laravel_Project\public\images\62487aaeafc46-Sample Blog.jpg']));
 $returnedData = identifyPlants([$target_file]);
-// echo $returnedData;
+
 $data2 = json_decode($returnedData, true);
-
-
-if(sizeof($data2['suggestions']) !== 0){
-foreach( $data2['suggestions'] as $suggestion)
-{
-	if( $suggestion['plant_name'] != null)
-	{
-		print "<h1>" . $suggestion['plant_name'] . "</h1>";
-	}
-    
-	
-	if( $suggestion['plant_details']['common_names'] != null)
-	{
-		print "<h1>Common Name: " . $suggestion['plant_details']['common_names'][0] . "</h1>";
-	}
-    
-	if($suggestion['similar_images'][0]){
-    print "<img src = " . $suggestion['similar_images'][0]['url'] . " />";
-	}   
-            
-    //     </div>
-    // </div>";
-}
-}
-
 ?>
+@if(sizeof($data2['suggestions']) !== 0)
+@endif
+<div class="flex flex-col items-center justify-center p-10">`
+	
+
+	<h1>Results Found...</h1>
+	<br>
+@foreach( $data2['suggestions'] as $suggestion)
+<div class="w-2/5 flex flex-col items-center text-center justify-center text-4xl border-4 border-indigo-200 border-b-indigo-500 p-10">
+	
+	
+	
+	@if($suggestion['similar_images'][0])
+      <img src ={{$suggestion['similar_images'][0]['url']}} />
+	   
+    @endif
+
+	@if( $suggestion['plant_name'] != null)
+	
+		<h1>{{$suggestion['plant_name']}}</h1>
+	
+    @endif
+	
+	@if( $suggestion['plant_details']['common_names'] != null)
+	
+	  <h1>Common Name: {{$suggestion['plant_details']['common_names'][0]}}</h1>
+	
+    @endif
+
+	
+	
+</div>
+<br>
+@endforeach
+</div>
+
+
+
 
 
 @endsection
