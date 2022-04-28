@@ -4,7 +4,11 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'garden-img': "url('./public/images/garden.webp')",
+      }
+    }
   },
   variants: {},
   plugins: [

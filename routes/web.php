@@ -29,3 +29,6 @@ Route::post('/identify', [\App\Http\Controllers\PlantController::class, 'identif
 
 Route::get('/redirect', '\App\Http\Controllers\Auth\LoginController@redirectToProvider');
 Route::get('/callback', '\App\Http\Controllers\Auth\LoginController@handleProviderCallback');
+
+Route::get('/redirect', '\App\Http\Controllers\Auth\LoginController@redirectToProviderGithub');
+Route::get('/callback', '\App\Http\Controllers\Auth\LoginController@handleProviderCallbackGithub');
