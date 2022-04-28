@@ -30,7 +30,7 @@
 				<br>
 				<br>
 				<br>
-				<input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" value="Upload Image" name="submit">
+				<input class="bg-gray-600 text-gray-100 font-bold py-2 px-4 rounded" type="submit" value="Upload Image" name="submit">
 				@csrf
 			</form>
         </div>

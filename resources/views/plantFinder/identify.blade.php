@@ -65,7 +65,7 @@ $data2 = json_decode($returnedData, true);
 	<h1>Results Found...</h1>
 	<br>
 @foreach( $data2['suggestions'] as $suggestion)
-<div class="w-2/5 flex flex-col items-center text-center justify-center text-4xl border-4 border-indigo-200 border-b-indigo-500 p-10">
+<div class="w-2/5 flex flex-col items-center text-center justify-center text-4xl border-4 border-gray-300 border-b-gray-500 rounded p-10">
 	
 	
 	
