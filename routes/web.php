@@ -28,7 +28,11 @@ Route::get('/plantFinder', [\App\Http\Controllers\PlantController::class, 'index
 Route::post('/identify', [\App\Http\Controllers\PlantController::class, 'identify']);
 
 Route::get('/redirect', '\App\Http\Controllers\Auth\LoginController@redirectToProvider');
+Route::get('/redirectGit', '\App\Http\Controllers\Auth\LoginController@redirectToProviderGithub');
 Route::get('/callback', '\App\Http\Controllers\Auth\LoginController@handleProviderCallback');
 
+<<<<<<< HEAD
 Route::get('/redirectgithub', '\App\Http\Controllers\Auth\GithubLoginController@redirectToProvider');
 Route::get('/callbackgithub', '\App\Http\Controllers\Auth\GithubLoginController@handleProviderCallback');
+=======
+>>>>>>> 81f696274858e160206ca4fda6e7c7a589fe5a54
