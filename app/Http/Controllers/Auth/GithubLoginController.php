@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
 
-class LoginController extends Controller
+class GithubLoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -25,21 +25,23 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function redirectToProvider()
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('github')->redirect();
     }
+
     public function handleProviderCallback()
     {
         try {
-            $user = Socialite::driver('google')->user();
+            $user = Socialite::driver('github')->user();
         } catch (\Exception $e) {
+            
             return redirect('/login');
+            
         }
-        // only allow people with @company.com to login
-        if(explode("@", $user->email)[1] !== 'gmail.com'){
-            return redirect()->to('/');
-        }
+        
         // check if they're an existing user
 
         
@@ -60,7 +62,6 @@ class LoginController extends Controller
         }
         return redirect()->to('/');
     }
-
 
     use AuthenticatesUsers;
 
