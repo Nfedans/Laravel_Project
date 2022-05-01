@@ -1,11 +1,13 @@
 ## Laravel 8 Complete Blog
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
+This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where Dary shows you how to create a complete blog in Laravel 8 using best practices.
+
+Here is a video demonstartion of our website [this youtube video](https://https://youtu.be/ibDFY3_QNKY) where Nikita shows you the extra features implemented + the style changes made using tailwind.
+
 
 •	Author: Code With Dary <br>
 •	Edited by Nikita & Nathan <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
+
 
 ## Requirements
 •	PHP 7.3 or higher <br>
