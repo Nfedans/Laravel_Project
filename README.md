@@ -2,7 +2,7 @@
 
 This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where Dary shows you how to create a complete blog in Laravel 8 using best practices.
 
-Here is a video demonstartion of our website [this youtube video](https://https://youtu.be/ibDFY3_QNKY) where Nikita shows you the extra features implemented + the style changes made using tailwind.
+Here is a video demonstartion of our website ["Click Here"](https://https://youtu.be/ibDFY3_QNKY) where Nikita shows you the extra features implemented + the style changes made using tailwind.
 
 
 •	Author: Code With Dary <br>
