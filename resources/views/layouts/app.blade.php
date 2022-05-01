@@ -30,9 +30,9 @@
                     <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" href="/plantFinder">Plant Identifier</a>
 
                     @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
