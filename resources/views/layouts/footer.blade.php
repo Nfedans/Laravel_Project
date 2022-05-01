@@ -1,5 +1,5 @@
 <footer class="bg-green-800 border-solid border-grey-2 border-t-2 py-20">
-    <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
+    <div class="sm:grid grid-cols-2 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
         <div>
             <h3 class="text-l sm:font-bold text-gray-100">
                 Pages
@@ -58,34 +58,7 @@
             </ul>
         </div>
 
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Latest posts
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-200">
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love design
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
-                    </a>
-                </li>
-            </ul>
-        </div>
+      
     </div>
     <p class="w-25 w-4/5 pb-3 m-auto text-xs text-green-100 pt-6">
         Copyright 2022 Tripl3F
